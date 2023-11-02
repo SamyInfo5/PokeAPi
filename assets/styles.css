@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #D88001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100px;
+    color: white;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.pokemonBox {
+    display: flex;
+    height: 300px;
+    padding-top: 40px;
+}
+
+.pokemonImage {
+    border: 1px solid red;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemon {
+    border: 1px solid red;
+    width: 100%;
+}
+
+.statOfPokemon{
+ border: 1px solid red;
+}
