@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+
+
 header {
     background-color: #D88001;
     display: flex;
@@ -12,6 +14,10 @@ header {
     text-align: center;
     height: 100px;
     color: white;
+}
+
+main{
+    background: #6078A1;
 }
 
 .container {
@@ -36,8 +42,25 @@ header {
 .pokemon {
     border: 1px solid red;
     width: 100%;
+    overflow: hidden;
+}
+
+.listPokemon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    overflow: scroll;
+}
+
+.pokemonname {
+    background: #000;
+    margin-top: 10px;
+    font-size: 40px;
 }
 
 .statOfPokemon{
  border: 1px solid red;
+ display: flex;
+ justify-content: space-around;
 }
