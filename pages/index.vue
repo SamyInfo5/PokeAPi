@@ -7,13 +7,13 @@
     <main>
         <div>
             <div class="container">
-                <div v-if="pokemon" class="pokemonBox">
+                <div class="pokemonBox">
                     <div class="pokemonImage">
-                        <img :src="pokemon.sprites.front_default" alt="Pokemon Image" />
+                        <img :src="data.sprites.front_default" alt="">
                     </div>
                     <div class="pokemon">
                         <div class="listPokemon">
-                            <h1>{{ pokemon.name }}</h1>
+                           <h1>{{ data.name }}</h1>
                         </div>
                     </div>
                 </div>
@@ -22,7 +22,7 @@
         <div class="detailsPokemon">
             <div class="container">
                 <div class="statOfPokemon">
-                    <h1>coucou</h1>
+                    <div v-for="(item, i) in data.stats" key="i">{{ item.stat.name }} : {{ item.base_stat }}</div>
                 </div>
             </div>
         </div>
@@ -30,10 +30,16 @@
     <footer>
         <div class="container">
             <div class="containeFooter">
+                
             </div>
         </div>
     </footer>
 </template>
 
 <script setup>
+
+import '~/assets/styles.css'
+const id = ref(1)
+const { data } = await useFetch(`https://pokeapi.co/api/v2/pokemon/${id.value}`)
+
 </script>
