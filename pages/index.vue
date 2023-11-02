@@ -13,7 +13,7 @@
           </div>
           <div class="pokemon">
             <div class="listPokemon">
-              <listPokemon/>
+              <listPokemon />
             </div>
           </div>
         </div>
@@ -40,5 +40,4 @@
 import "~/assets/styles.css";
 const id = ref(1);
 const { data } = await useFetch(`https://pokeapi.co/api/v2/pokemon/${id.value}`);
-
 </script>
