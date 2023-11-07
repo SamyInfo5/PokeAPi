@@ -3,21 +3,16 @@
         <h1>Liste des Pokémon</h1>
         <ul>
             <li class="pokemonname" v-for="pokemon in pokemonList" :key="pokemon.id">
-                {{ pokemon.name }}
+                <NuxtLink :href="`pokemon/${pokemon.name}`">
+                    {{ pokemon.name }}
+                </NuxtLink>
             </li>
         </ul>
     </div>
 </template>
   
 <script setup>
-const pokemonList = ref([]);
-
-const fetchPokemonList = async (offset = 0) => {
-    const { data } = await useFetch(`https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=1290/`);
-    pokemonList.value = data._rawValue.results;
-    console.log(data)
-};
-
-// Appeler la fonction pour récupérer la liste initiale de Pokémon
-fetchPokemonList();
+const props = defineProps({
+    pokemonList: Array
+})
 </script>
