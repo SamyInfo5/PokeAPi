@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    overflow: hidden;
+}
 
 header {
     background-color: #D88001;
@@ -16,6 +19,17 @@ header {
 
 main {
     background: #6078A1;
+    height: 80vh;
+    overflow: scroll;
+}
+
+footer {
+    background-color: #D88001;
+    height: 9vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
 }
 
 .container {

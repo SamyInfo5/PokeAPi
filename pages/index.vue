@@ -43,6 +43,9 @@
       </div>
     </div>
   </main>
+  <footer>
+    <h1>designed by SamyCode</h1>
+  </footer>
 </template>
 
 <script setup>
