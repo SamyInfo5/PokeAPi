@@ -5,7 +5,7 @@
     </div>
   </header>
   <main>
-    <div>
+    <div class="">
       <div class="container">
         <div class="pokemonBox">
           <div class="pokemonImage">
@@ -36,7 +36,7 @@
           <div>
             <h1>localisation</h1>
             <div class="localisation" v-for="(item, k) in localisation" key="k">
-              <pre>{{ item.location_area.name }}</pre>
+              <p>{{ item.location_area.name }}</p>
             </div>
           </div>
         </div>
@@ -49,7 +49,6 @@
 </template>
 
 <script setup>
-import "~/assets/styles.css";
 
 const id = ref(1);
 const pokemonList = ref([])
@@ -72,3 +71,103 @@ const fetchPokemonList = async (offset = 0) => {
 
 fetchPokemonList();
 </script>
+
+ <style scoped>
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  overflow: hidden;
+}
+
+header {
+  background-color: #D88001;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100px;
+  color: white;
+}
+
+main {
+  background: #6078A1;
+  height: 80vh;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background-color: #D88001;
+  height: 9vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.pokemonBox {
+  display: flex;
+  height: 300px;
+  padding-top: 40px;
+}
+
+.pokemonImage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokemon {
+  width: 100%;
+  overflow: scroll;
+}
+
+.listPokemon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.statOfPokemon{
+  font-size: 40px;
+  justify-content: space-around;
+  padding-top: 20px;
+  display: flex;
+
+  & h6{
+    color: white;
+  }
+}
+
+.caract {
+  padding-top: 50px;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.types {
+  & p {
+    color: white;
+    font-size: 30px;
+  }
+}
+
+.localisation {
+  & p {
+    color: white;
+    font-size: 30px;
+  }
+}
+</style>

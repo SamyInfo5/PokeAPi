@@ -1,65 +1,70 @@
 <template>
     <main>
         <div class="region">
+            <button>
+                <NuxtLink href="/acceuil">
+                    ALL
+                </NuxtLink>
+            </button>
             <div class="kantho">
-                <a href="/region/kanto">
+                <NuxtLink href="/region/kanto">
                     <h1>kanto</h1>
                     <img src="@/assets/kantho.webp" style="width: 300px;">
-                </a>
+                </NuxtLink>
             </div>
             <div class="Jotho">
-                <a href="">
+                <NuxtLink href="">
                     <h1>Jotho</h1>
                     <img src="@/assets/jotho.jpg" style="width: 300px;">
-                </a>
+                </NuxtLink>
             </div>
             <div class="Hoenn">
-                <a href="">
+                <NuxtLink href="">
                     <h1>Hoenn</h1>
                     <img src="@/assets/Hoenn.png" style="width: 300px;">
-                </a>
+                </NuxtLink>
             </div>
             <div class="Sinnoh">
-                <a href="">
+                <NuxtLink href="">
                     <h1>Sinnoh</h1>
                     <img src="@/assets/Sinnoh.png" style="width: 300px;">
-                </a>
+                </NuxtLink>
             </div>
             <div class="Unys">
-                <a href="">
+                <NuxtLink href="">
                     <h1>Unys</h1>
                     <img src="@/assets/Unys.webp" style="width: 300px;">
-                </a>
+                </NuxtLink>
             </div>
             <div class="Kalos">
-                <a href="">
+                <NuxtLink href="">
                     <h1>Kalos</h1>
                     <img src="@/assets/Kalos.png" style="width: 300px;">
-                </a>
+                </NuxtLink>
             </div>
             <div class="Alola">
-                <a href="">
+                <NuxtLink href="">
                     <h1>Alolah</h1>
                     <img src="@/assets/alola.webp" style="width: 300px;">
-                </a>
+                </NuxtLink>
             </div>
             <div class="Galar">
-                <a href="">
+                <NuxtLink href="">
                     <h1>Galar</h1>
                     <img src="@/assets/galar.jpg" style="width: 300px;">
-                </a>
+                </NuxtLink>
             </div>
             <div class="Hisui">
-                <a href="">
+                <NuxtLink href="">
                     <h1>Hisui</h1>
                     <img src="@/assets/Hisui.webp" style="width: 300px;">
-                </a>
+                </NuxtLink>
             </div>
         </div>
     </main>
 </template>
 
-<style>
+<style scoped>
 * {
     padding: 0;
     margin: 0;
@@ -68,10 +73,10 @@
     color: cornflowerblue;
 }
 
-body{
+body {
     background: url("../assets/bg.jpg");
     background-position: center center;
-    
+
 }
 
 main {

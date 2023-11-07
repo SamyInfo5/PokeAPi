@@ -40,10 +40,117 @@
 </template>
 
 <script setup>
-import "~/assets/singlepkmn.css";
 const route = useRoute();
 const { data: pokemon } = await useFetch(
   `https://pokeapi.co/api/v2/pokemon/${route.params.name}`
 );
 console.log(pokemon);
 </script>
+
+<style scoped>
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: flex-center;
+  align-items: flex-center;
+  background-color: black;
+
+  & button {
+    margin-right: 10px;
+    height: 50px;
+    width: 125px;
+    border-radius: 15px ;
+  }
+
+  & h1 {
+    color: white;
+  }
+}
+
+main{
+  display: flex;
+  justify-content: flex-center;
+  align-items: flex-start;
+  overflow: scroll;
+  background-color: red;
+}
+
+footer{
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: flex-center;
+  align-items: flex-center;
+}
+
+.classPokemon{
+  display: flex;
+
+  & h1 {
+    color: white;
+    margin-right: 20px;
+  }
+  & .types p{
+    color: white;
+    font-size: 30px;
+    padding-right: 10px;
+  }
+}
+
+.abilitys{
+  display: flex;
+
+  & h1 {
+    color: white;
+    margin-right: 20px;
+  }
+
+  & .abi p{
+    color: white;
+    font-size: 30px;
+    padding-right: 10px;
+  }
+}
+
+.expBase{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-center;
+
+  & h1 {
+    color: white;
+    margin-right: 20px;
+  }
+
+  & .exp{
+    color: white;
+    font-size: 20px;
+  }
+}
+
+.allAttack{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-center;
+  align-items: flex-center;
+  & h1{
+    color: white;
+  }
+  & .atck button {
+    height: 70px;
+    width: 100px;
+    margin: 9px;
+  }
+}
+
+</style>
