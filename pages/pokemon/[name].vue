@@ -1,6 +1,6 @@
 <template>
   <header class="headerPokemon">
-  <button> <a href="/acceuil/index.vue">Back To acceuil</a> </button>
+    <button> <a href="/acceuil">Back To acceuil</a> </button>
     <h1>Voici : {{ $route.params.name }}</h1>
     <img :src="pokemon.sprites.front_default" alt="" />
   </header>
@@ -48,28 +48,17 @@ console.log(pokemon);
 </script>
 
 <style scoped>
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-.container {
-  width: 80%;
-  margin: 0 auto;
-}
-
 header {
   display: flex;
-  justify-content: flex-center;
-  align-items: flex-center;
+  justify-content: center;
+  align-items: center;
   background-color: black;
 
   & button {
     margin-right: 10px;
     height: 50px;
     width: 125px;
-    border-radius: 15px ;
+    border-radius: 15px;
   }
 
   & h1 {
@@ -77,37 +66,25 @@ header {
   }
 }
 
-main{
+main {
   display: flex;
   justify-content: flex-center;
   align-items: flex-start;
   overflow: scroll;
   background-color: red;
+  height: 80vh;
 }
 
-footer{
+footer {
   background-color: black;
   color: white;
   display: flex;
-  justify-content: flex-center;
-  align-items: flex-center;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
 }
 
-.classPokemon{
-  display: flex;
-
-  & h1 {
-    color: white;
-    margin-right: 20px;
-  }
-  & .types p{
-    color: white;
-    font-size: 30px;
-    padding-right: 10px;
-  }
-}
-
-.abilitys{
+.classPokemon {
   display: flex;
 
   & h1 {
@@ -115,14 +92,29 @@ footer{
     margin-right: 20px;
   }
 
-  & .abi p{
+  & .types p {
     color: white;
     font-size: 30px;
     padding-right: 10px;
   }
 }
 
-.expBase{
+.abilitys {
+  display: flex;
+
+  & h1 {
+    color: white;
+    margin-right: 20px;
+  }
+
+  & .abi p {
+    color: white;
+    font-size: 30px;
+    padding-right: 10px;
+  }
+}
+
+.expBase {
   display: flex;
   justify-content: flex-end;
   align-items: flex-center;
@@ -132,25 +124,26 @@ footer{
     margin-right: 20px;
   }
 
-  & .exp{
+  & .exp {
     color: white;
     font-size: 20px;
   }
 }
 
-.allAttack{
+.allAttack {
   display: flex;
   flex-direction: column;
-  justify-content: flex-center;
-  align-items: flex-center;
-  & h1{
+  justify-content: center;
+  align-items: center;
+
+  & h1 {
     color: white;
   }
+
   & .atck button {
-    height: 70px;
-    width: 100px;
+    height: 90px;
+    width: 120px;
     margin: 9px;
   }
 }
-
 </style>
