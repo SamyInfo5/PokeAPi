@@ -44,7 +44,6 @@ const route = useRoute();
 const { data: pokemon } = await useFetch(
   `https://pokeapi.co/api/v2/pokemon/${route.params.name}`
 );
-console.log(pokemon);
 </script>
 
 <style scoped>
