@@ -2,7 +2,7 @@
   <header class="headerPokemon">
     <button> <a href="/">Back To acceuil</a> </button>
     <h1>Voici : {{ $route.params.name }}</h1>
-    <img :src="pokemon.sprites.front_default" alt="pokemon" />
+    <img :src="pkmnimg" alt="pokemon" :data-log="console.log(pkmnimg)" />
   </header>
   <main>
     <div class="pokemon">
@@ -44,7 +44,10 @@ const route = useRoute();
 const { data: pokemon } = await useFetch(
   `https://pokeapi.co/api/v2/pokemon/${route.params.name}`
 );
-console.log(pokemon)
+
+const pkmnimg = computed (() => {
+  return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.value.id}.png`
+})
 </script>
 
 <style scoped>

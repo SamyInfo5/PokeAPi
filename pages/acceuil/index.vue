@@ -68,7 +68,6 @@ const fetchPokemonList = async (offset = 0) => {
     `https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=1290/`
   );
   pokemonList.value = data._rawValue.results;
-  console.log("pokemonList", pokemonList.value);
 };
 
 fetchPokemonList();

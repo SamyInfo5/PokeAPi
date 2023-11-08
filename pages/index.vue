@@ -1,6 +1,8 @@
 <template>
+    <header>
+        <img src="/assets/logo.png" alt="">
+    </header>
     <main>
-
         <button>
             <NuxtLink href="/acceuil">
                 ALL
@@ -63,10 +65,29 @@
             </div>
         </div>
     </main>
+    <ul>
+        <li><img class="pikachu" src="/assets/pikachuu.png" alt=""></li>
+    </ul>
 </template>
 
 
 
 <style>
 @import url("~/assets/style/home.css");
+
+main{
+    position: relative;
+}
+
+body{
+    overflow: hidden;
+}
+
+.pikachu {
+    height: 60%;
+    width: 30%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
 </style>
