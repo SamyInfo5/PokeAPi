@@ -1,6 +1,9 @@
 <template>
   <header>
     <div class="container">
+      <button>
+        <NuxtLink href="/"> Home </NuxtLink>
+      </button>
       <h1>PokeApi NuxtJs</h1>
     </div>
   </header>
@@ -49,9 +52,8 @@
 </template>
 
 <script setup>
-
 const id = ref(1);
-const pokemonList = ref([])
+const pokemonList = ref([]);
 
 const { data } = await useFetch(`
   https://pokeapi.co/api/v2/pokemon/${id.value}
@@ -62,29 +64,29 @@ const { data: localisation } = await useFetch(
 );
 
 const fetchPokemonList = async (offset = 0) => {
-  const { data } = await useFetch(`https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=1290/`);
+  const { data } = await useFetch(
+    `https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=1290/`
+  );
   pokemonList.value = data._rawValue.results;
-  console.log('pokemonList', pokemonList.value)
+  console.log("pokemonList", pokemonList.value);
 };
-
-
 
 fetchPokemonList();
 </script>
 
- <style scoped>
-
+<style scoped>
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-body{
+
+body {
   overflow: hidden;
 }
 
 header {
-  background-color: #D88001;
+  background-color: #d88001;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,7 +96,7 @@ header {
 }
 
 main {
-  background: #6078A1;
+  background: #6078a1;
   height: 80vh;
   overflow: scroll;
   display: flex;
@@ -102,7 +104,7 @@ main {
 }
 
 footer {
-  background-color: #D88001;
+  background-color: #d88001;
   height: 9vh;
   display: flex;
   justify-content: center;
@@ -139,13 +141,13 @@ footer {
   align-items: center;
 }
 
-.statOfPokemon{
+.statOfPokemon {
   font-size: 40px;
   justify-content: space-around;
   padding-top: 20px;
   display: flex;
 
-  & h6{
+  & h6 {
     color: white;
   }
 }

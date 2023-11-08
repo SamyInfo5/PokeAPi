@@ -1,11 +1,11 @@
 <template>
   <header class="headerPokemon">
-    <button> <a href="/acceuil">Back To acceuil</a> </button>
+    <button> <a href="/">Back To acceuil</a> </button>
     <h1>Voici : {{ $route.params.name }}</h1>
-    <img :src="pokemon.sprites.front_default" alt="" />
+    <img :src="pokemon.sprites.front_default" alt="pokemon" />
   </header>
   <main>
-    <div>
+    <div class="pokemon">
       <div class="container">
         <div class="classPokemon">
           <h1>Pokemon de Types :</h1>
@@ -44,9 +44,11 @@ const route = useRoute();
 const { data: pokemon } = await useFetch(
   `https://pokeapi.co/api/v2/pokemon/${route.params.name}`
 );
+console.log(pokemon)
 </script>
 
 <style scoped>
+
 header {
   display: flex;
   justify-content: center;
@@ -69,7 +71,7 @@ main {
   display: flex;
   justify-content: flex-center;
   align-items: flex-start;
-  overflow: scroll;
+  overflow: hidden;
   background-color: red;
   height: 80vh;
 }
@@ -144,5 +146,9 @@ footer {
     width: 120px;
     margin: 9px;
   }
+}
+
+.pokemon {
+  overflow: scroll;
 }
 </style>

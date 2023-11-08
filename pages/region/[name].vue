@@ -4,30 +4,29 @@
   </header>
   <main>
     <div class="container">
-      <div class="scroll">
-        <ol class="pokemonInPokedex">
-          <li class="pkdx" v-for="(item, i) in pokemon" key="i">
-            <NuxtLink :href="`/pokemon/${item.pokemon_species.name}`">
-              {{ item.pokemon_species.name }}
-            </NuxtLink>
-          </li>
-        </ol>
-      </div>
+      <ol class="pokemonInPokedex">
+        <li class="pkdx" v-for="(item, i) in pokemon" key="i">
+          <NuxtLink :href="`/pokemon/${item.pokemon_species.name}`">
+            {{ item.pokemon_species.name }}
+          </NuxtLink>
+        </li>
+        <div>
+      
+        </div>
+      </ol>
     </div>
   </main>
-  <footer>
-    <h1>Designed by Samuel</h1>
-  </footer>
 </template>
 
 <script setup>
 const route = useRoute();
-const pokemonList = ref([]);
 const { data } = await useFetch(`https://pokeapi.co/api/v2/region/${route.params.name}`);
-const recuppokedex = data.value
-const url = recuppokedex.pokedexes[0].url
-const { data: regionPokedex } = await useFetch(url)
-const pokemon = regionPokedex.value.pokemon_entries
+const recuppokedex = data.value;
+const url = recuppokedex.pokedexes[0].url;
+const { data: regionPokedex } = await useFetch(url);
+const pokemon = regionPokedex.value.pokemon_entries;
+
+
 </script>
 
 <style scoped>
@@ -43,12 +42,12 @@ const pokemon = regionPokedex.value.pokemon_entries
 }
 
 body {
-  background: url('/public/assets/bg.jpg');
+  background: url("/public/assets/bg.jpg");
   background-position: center center;
   background-repeat: no-repeat;
 }
 
-.scroll{
+.scroll {
   overflow: scroll;
 }
 
@@ -68,11 +67,13 @@ header {
 main {
   display: flex;
   justify-content: flex-end;
-  height: 92vh;
+  height: 89vh;
   overflow: scroll;
 }
 
 .pokemonInPokedex {
+  margin-top: 50px;
+  margin-bottom: 50px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -82,7 +83,7 @@ main {
 
 li {
   background: rgb(141, 237, 225);
-  list-style: inside url('/assets/pokeball.png');
+  list-style: inside url("/assets/pokeball.png");
   width: 200px;
   height: 50px;
 }
