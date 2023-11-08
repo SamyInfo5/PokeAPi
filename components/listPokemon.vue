@@ -15,4 +15,17 @@
 const props = defineProps({
     pokemonList: Array
 })
+
 </script>
+
+<style scoped>
+.pokemonname {
+  background: #FDF9C7;
+  color: #515251;
+  margin-top: 10px;
+  font-size: 40px;
+  list-style: inside url("/assets/pokeball.png");
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+</style>
