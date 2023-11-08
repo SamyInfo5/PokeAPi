@@ -20,3 +20,7 @@ const pokemonList = ref([])
   pokemonList.value = data.value.pokemon_entries
   console.log('pokemonList', pokemonList)
 </script>
+
+<style scoped>
+@import url("~/assets/style/region.css");
+</style>

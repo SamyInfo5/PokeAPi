@@ -1,63 +1,64 @@
 <template>
     <main>
+    
+        <button>
+            <NuxtLink href="/acceuil">
+                ALL
+            </NuxtLink>
+        </button>
         <div class="region">
-            <button>
-                <NuxtLink href="/acceuil">
-                    ALL
-                </NuxtLink>
-            </button>
-            <div class="kantho">
+            <div class="card">
                 <NuxtLink href="/region/kanto">
                     <h1>kanto</h1>
-                    <img src="@/assets/kantho.webp" style="width: 300px;">
+                    <img src="@/assets/kantho.webp">
                 </NuxtLink>
             </div>
-            <div class="Jotho">
+            <div class="card">
                 <NuxtLink href="">
                     <h1>Jotho</h1>
-                    <img src="@/assets/jotho.jpg" style="width: 300px;">
+                    <img src="@/assets/jotho.jpg">
                 </NuxtLink>
             </div>
-            <div class="Hoenn">
+            <div class="card">
                 <NuxtLink href="">
                     <h1>Hoenn</h1>
-                    <img src="@/assets/Hoenn.png" style="width: 300px;">
+                    <img src="@/assets/Hoenn.png">
                 </NuxtLink>
             </div>
-            <div class="Sinnoh">
+            <div class="card">
                 <NuxtLink href="">
                     <h1>Sinnoh</h1>
-                    <img src="@/assets/Sinnoh.png" style="width: 300px;">
+                    <img src="@/assets/Sinnoh.png">
                 </NuxtLink>
             </div>
-            <div class="Unys">
+            <div class="card">
                 <NuxtLink href="">
                     <h1>Unys</h1>
-                    <img src="@/assets/Unys.webp" style="width: 300px;">
+                    <img src="@/assets/Unys.webp">
                 </NuxtLink>
             </div>
-            <div class="Kalos">
+            <div class="card">
                 <NuxtLink href="">
                     <h1>Kalos</h1>
-                    <img src="@/assets/Kalos.png" style="width: 300px;">
+                    <img src="@/assets/Kalos.png">
                 </NuxtLink>
             </div>
-            <div class="Alola">
+            <div class="card">
                 <NuxtLink href="">
                     <h1>Alolah</h1>
-                    <img src="@/assets/alola.webp" style="width: 300px;">
+                    <img src="@/assets/alola.webp">
                 </NuxtLink>
             </div>
-            <div class="Galar">
+            <div class="card">
                 <NuxtLink href="">
                     <h1>Galar</h1>
-                    <img src="@/assets/galar.jpg" style="width: 300px;">
+                    <img src="@/assets/galar.jpg">
                 </NuxtLink>
             </div>
-            <div class="Hisui">
+            <div class="card">
                 <NuxtLink href="">
                     <h1>Hisui</h1>
-                    <img src="@/assets/Hisui.webp" style="width: 300px;">
+                    <img src="@/assets/Hisui.webp">
                 </NuxtLink>
             </div>
         </div>
